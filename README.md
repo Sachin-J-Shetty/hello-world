@@ -11,5 +11,3 @@ composer install
 docker build -t hello-world .
 
 docker run -d -p 8080:80 --name hello-world hello-world
-
-Test
