@@ -7,6 +7,12 @@ node {
          echo "Cloning the Repository to our Workspace"
     }
 
+    stage('Build Test') {
+	    steps{
+                   sh "cd hello-word"
+		   sh "touch test.php"
+	    }
+    }
     stage('Build image') {
         app = docker.build("sachinjshetty/hello-world")
 	echo "This builds the actual image"
